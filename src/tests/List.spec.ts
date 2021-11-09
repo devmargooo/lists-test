@@ -34,6 +34,14 @@ describe("List", () => {
         expect((third as unknown as INode<Value>).next).toBe(second);
     });
 
+    it("Верен указатель head", () => {
+        expect(list.head).toBe(first);
+    });
+
+    it("Верен указатель tail", () => {
+        expect(list.tail).toBe(third);
+    });
+
     it("Находит элемент по индексу", () => {
         expect(list.find(0)).toBe(first);
         expect(list.find(1)).toBe(second);

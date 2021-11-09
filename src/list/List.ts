@@ -18,5 +18,13 @@ export class List<T> {
     remove(index: number) {
 
     }
+
+    print():void {
+
+    }
+
+    public head?:T;
+    public tail?:T;
     public length:number = 0;
+
 }
