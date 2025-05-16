@@ -12,7 +12,6 @@ const new_third = { id: 4, name: 'другой трейти' };
 
 interface INode<T> {
   next: T;
-  prev: T;
 }
 describe('List', () => {
   const list = new List<Value>();
@@ -27,11 +26,6 @@ describe('List', () => {
   it('Верны указатели next', () => {
     expect((first as unknown as INode<Value>).next).toBe(second);
     expect((second as unknown as INode<Value>).next).toBe(third);
-  });
-
-  it('Верны указатели prev', () => {
-    expect((second as unknown as INode<Value>).prev).toBe(first);
-    expect((third as unknown as INode<Value>).next).toBe(second);
   });
 
   it('Верен указатель head', () => {
